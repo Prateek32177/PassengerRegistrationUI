@@ -1,0 +1,122 @@
+<!Doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<title>Ticket Booking</title>
+<link href="https://fonts.googleapis.com/css2?family=Play&family=Sacramento&family=Lato&family=Trispace&display=swap" rel="stylesheet">
+<style>
+    select {
+        width: 150px;
+        margin: 2px;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+.full
+{
+text-align:center;
+background-image: linear-gradient( rgb(198, 217, 238), white);
+padding-top: 5px;
+}
+h1
+{
+color:green;
+}
+h2{
+    font-family: 'Play', sans-serif;
+   
+    letter-spacing: 6px;
+    color: rgb(255, 74, 104);
+    font-size: 35px;  
+}
+
+td{
+    
+    font-family: 'Trispace', sans-serif;
+    color: rgb(0, 73, 156);
+    
+
+}
+
+.top-bar{
+    background-image: linear-gradient(to right,rgb(255, 74, 104), white);
+}
+
+</style>
+<script src="ticket_booking.js"></script>
+
+</head>
+<body style='background:cream'>
+    <div class="full">
+<center>
+    <div class="top-bar">
+<h2 style="color: white;">Ticket Booking</h2>
+</div>
+<br>
+<table border='0' width="500px">
+<tr>
+<td width="100px"> PNR NO.</td><td width="200px">
+<input type='text' name='pnr' id='pnr'  size="16" disabled> <span id="error1" ></span> <br>
+</td>
+</tr>
+<tr>
+<td>Travel Date</td><td width="200px">
+<input type='text' name='date' placeholder="dd/mm/yyyy" value="" size="16" id='date'> <span id="error2"></span> <br>
+</td>
+</tr>
+<tr>
+    <td>Source</td><td width="200px">
+<input type='text ' name='source' size="16" id='source'>  <span id="error3"></span> <br>
+</td>
+</tr>
+<tr>
+    <td>Destination</td><td width="200px">
+<input type='text' name ='destination' size="16" id=destination width="100px">  <span id="error4"></span> <br>
+</tr>
+</td>
+<tr>
+    <td>Status</td><td width="200px">
+<select name='status'  id='status'>
+<option value='1' width="100%">New    </option>
+<option value='2' size="50">Confirm</option>
+<option value='3' size="50">Hold   </option>
+</select>
+</td>
+</tr>
+<tr>
+    <td>Seat Preference</td><td width="100px">
+<select name='seat' id='seat'>
+<option value='1' size="30">Windows</option>
+<option value='2' size="15">Middle </option>
+<option value='3' size="15">Aisle  </option>
+</select>
+</td>
+</tr>
+<tr>
+    <td>Meal Preference</td><td width="100px">
+<select name='meal' id='meal'>
+<option value='1' size="15">Veg</option>
+<option value='2' size="15">Non-veg</option>
+</select></td>
+</tr>
+<tr>
+    <td>Book Ticket</td><td colspan='2'>
+<id ='ack' name= 'ack'>
+<button onclick= "validateAllData(document.getElementById('pnr').value,document.getElementById('date').value,document.getElementById('source').value,document.getElementById('destination').value,document.getElementById('status'),document.getElementById('seat'),document.getElementById('meal'))
+">Submit</button></td></tr></table>
+
+</center>
+</div>
+<script>
+    function random()
+{
+return Math.floor(Math.random() * 10000000);
+}
+
+document.getElementById("pnr").value=random();
+
+</script>
+</body>
+</html>
