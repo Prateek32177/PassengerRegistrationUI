@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align:center;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+.topnav h2 {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 35px;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+
+.card{
+	
+	margin-left:35%;
+	background-color:#f1f1f1;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width:600px;
+  margin-top:5%;
+
+}
+
+
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+table {
+  color: #333;
+  font-size: .9em;
+  height:350px;
+  font-weight: 300;
+  width: 100%;
+ 
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.16);
+  border-radius: 2px;
+}
+td{
+	
+  border: 2px solid black;
+  
+	
+}
+th{
+  border: 2px solid black;
+  text-align: center;
+
+  
+}
+
+th {
+  background: #ed1c40;
+  color: #fff;
+ 
+}
+
+tr:hover:not(th) {background-color: rgba(237,28,64,.1);}
+
+
+input[type="button"] {
+	transition: all .3s;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+	margin-top:2%;
+	margin-bottom:5%;
+	font-size: 15px;
+	margin-left:2%;
+}
+
+input[type="button"]:not(.active) {
+	background-color:transparent;
+}
+
+.active {
+	background-color: #ff4d4d;
+	color :#fff;
+}
+
+input[type="button"]:hover:not(.active) {
+	background-color: #ddd;
+}
